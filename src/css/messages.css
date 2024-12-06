@@ -1,0 +1,43 @@
+.message {
+    display: flex;
+    margin-bottom: 10px;
+    max-width: 70%;
+}
+
+.message p {
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.message.incoming {
+    align-self: flex-start;
+}
+
+.message.incoming p {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-top-left-radius: 0;
+}
+
+.message.outgoing {
+    align-self: flex-end;
+}
+
+.message.outgoing p {
+    background-color: #dcf8c6;
+    border: 1px solid #c7eaa5;
+    border-top-right-radius: 0;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    background-color: #e5ddd5;
+    height: 100vh;
+    overflow-y: auto;
+}

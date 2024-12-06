@@ -1,0 +1,196 @@
+.chat-list {
+    background-color: #ffffff;
+    height: 100vh;
+    overflow-y: auto;
+    border-right: 1px solid #e0e0e0;
+}
+
+.chat-item {
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.chat-item:hover {
+    background-color: #f5f5f5;
+}
+
+.chat-container {
+    display: flex;
+    align-items: center;
+}
+
+.MuiAvatar-root {
+    width: 49px;
+    height: 49px;
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+.chat-info {
+    flex-grow: 1;
+}
+
+.chat-info h4 {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 400;
+    color: #111b21;
+}
+
+/* Add a subtle divider between chat items */
+.chat-item:not(:last-child) {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* Style scrollbar for webkit browsers */
+.chat-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-list::-webkit-scrollbar-thumb {
+    background-color: #cccccc;
+    border-radius: 3px;
+}
+
+.chat-list::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+}
+
+.Cerrar-sesion {
+    position: fixed; /* Fija la posición */
+    bottom: 20px; /* Margen inferior */
+    left: 50%; /* Centra horizontalmente */
+    transform: translateX(-50%); /* Ajusta el centrado */
+    background-color: #ff4d4d; /* Color de fondo rojo */
+    color: white; /* Texto blanco */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 25px; /* Bordes redondeados */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+    cursor: pointer; /* Indica que es clickeable */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background-color 0.3s, transform 0.3s; /* Animación suave */
+  }
+  
+  .Cerrar-sesion:hover {
+    background-color: #e60000; /* Color de fondo más oscuro al pasar el ratón */
+    transform: translateX(-50%) scale(1.1); /* Efecto de zoom */
+  }
+  
+  .Cerrar-sesion:active {
+    background-color: #cc0000; /* Color más oscuro al hacer clic */
+    transform: translateX(-50%) scale(0.95); /* Efecto de clic */
+  }
+
+  .chat-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Esto asegura que los elementos estén separados */
+    padding: 10px;
+}
+
+.chat-header .fas.fa-trash {
+    margin-left: auto; /* Empuja el ícono hacia la derecha */
+    cursor: pointer;
+    color: #ff4d4d; /* Opcional: añade color para destacar */
+    transition: transform 0.3s, color 0.3s; /* Opcional: animaciones */
+}
+
+.chat-header .fas.fa-trash:hover {
+    color: #e60000; /* Cambia de color al pasar el mouse */
+    transform: scale(1.2); /* Añade un efecto de zoom */
+}
+
+.addChat {
+    position: fixed; /* Fija la posición */
+    bottom: 20px; /* Margen inferior */
+    left: 80%; /* Centra horizontalmente */
+    transform: translateX(-50%); /* Ajusta el centrado */
+    background-color: #93ea9b; /* Color de fondo rojo */
+    color: white; /* Texto blanco */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 25px; /* Bordes redondeados */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+    cursor: pointer; /* Indica que es clickeable */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background-color 0.3s, transform 0.3s; /* Animación suave */
+  }
+  
+  .addChat:hover {
+    background-color: #00e613; /* Color de fondo más oscuro al pasar el ratón */
+    transform: translateX(-50%) scale(1.1); /* Efecto de zoom */
+  }
+  
+  .addChat:active {
+    background-color: #00e613; /* Color más oscuro al hacer clic */
+    transform: translateX(-50%) scale(0.95); /* Efecto de clic */
+  }
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Ocultar el modal cuando no está visible */
+  .modal.escondido {
+    display: none;
+  }
+  
+  /* Contenido del modal */
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+  }
+  
+  /* Botones */
+  .add-chat-button,
+  .create-chat-button,
+  .close-modal-button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .add-chat-button {
+    background-color: #0056b3;
+    color: white;
+  }
+  
+  .create-chat-button {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .close-modal-button {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .add-chat-button:hover {
+    background-color: #004494;
+  }
+  
+  .create-chat-button:hover {
+    background-color: #218838;
+  }
+  
+  .close-modal-button:hover {
+    background-color: #c82333;
+  }
